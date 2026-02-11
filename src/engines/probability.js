@@ -31,7 +31,7 @@ export function scoreDirection(inputs) {
     if (rsi < 45 && rsiSlope < 0) down += 2;
   }
 
-  if (macd?.hist !== null && macd?.histDelta !== null) {
+  if (macd != null && macd.hist != null && macd.histDelta != null) {
     const expandingGreen = macd.hist > 0 && macd.histDelta > 0;
     const expandingRed = macd.hist < 0 && macd.histDelta < 0;
     if (expandingGreen) up += 2;
